@@ -5,3 +5,8 @@ of help..) and to let them find each other by map, list, or other means
 
 some mockups here:
 http://www.flickr.com/photos/utunga/sets/72157625993146931/
+
+data - just test data for now - available at couchone.. eg
+http://chchneeds.couchone.com/testing/_design/couchapp/_view/all?reduce=false
+http://chchneeds.couchone.com/testing/_design/couchapp/_view/by_loc?group_level=2
+
