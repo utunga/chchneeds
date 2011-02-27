@@ -1,0 +1,3 @@
+/loc/:loc
+/loc/:loc/:type
+/loc/:loc/:type/:tag

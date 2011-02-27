@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+	<meta charset="UTF-8">
+	<title>Christchurch Needs Info</title>
+	<meta name="description" content="Info site for Christchurch in wake of earthquake">
+	<meta name="author" content="Miles Gray @utunga">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="apple-touch-icon" href="apple-touch-icon.png">
+	<link rel="stylesheet" href="css/library.css?v=3">
+	<link rel="stylesheet" href="css/style.css?v=3">
+	<script src="js/libs/modernizr-1.6.min.js"></script>
+</head>
+<body>
+<!-- START BODY -->
+
+
+
+<div id="container">
+
+<header>
+<div class="header ptm">
+<div class="container">
+<div class="page">
+<div class="line">
+<div class="3of5 unit">
+<a href="#!/"><img src="img/logo.png" class="logo"/></a>
+<div class="clear"><!-- clear floats --></div>
+<h1>You can organise a fair bit with a #hashtag or two.</h1>
+
+</div>
+<div class="2of5 unit pll">
+<div class="navigation">
+    <ul>
+    <li><a href="#todo_howowrks">How does this work?</a></li>
+    <li><a href="#todo_datafeed">Latest activity</a></li>
+    </ul>
+</div><!-- navigation -->
+</div>
+</div>
+</div>
+
+
+
+
+</div><!-- /.container -->
+</div><!-- /.head -->
+</header>
+
+<div id="main">
+<div class="body mainbody">
+<div class="page">
+<div class="line">
+
+<!-- MAIN BODY CONTENT -->
+<div class="unit size3of5">
+ 
+<div class="container pam">
+    <div id="curr_title" ></div>
+</div>
+
+<div id="tasks">
+	.. loading ..
+</div>
+
+</div>
+
+<!-- RIGHT COL -->
+<div class="unit size2of5 pll" >
+ 	
+	<div class="addyours pal mam">
+	<h2>Add your own!</h2>
+	<ol>
+	<li>Tweet <strong>#offer</strong>, <strong>#need</strong> or <strong>#helpme</strong></li>
+	<li>Include your location
+	  <!-- <ul>
+	    <li><i>after 'in' - "in burwoord." or..</i></li>
+        <li><i>after 'at' - "at 22 Avonside Drive."</i></li>
+	  </ul> -->
+	<li>Include the hashtag <strong>#chch</strong> or <strong>#eqnz</strong></li>
+	</ol>
+	</div>
+  
+ 	<div class="filterbox pal mam">
+		<div id="types"></div>
+	</div> 
+	
+	<div class="filterbox pal mam">
+		<div id="tags"></div>
+	<a href="#still_need_to_do_this_sorry" class="more">Show all tags</a>
+	</div>
+    
+	<div class="filterbox pal mam">
+		<div id="locations"></div>
+	</div>
+	  
+    <div class="filterbox pal mam">
+        <div id="groups"></div>
+	</div>
+
+</div>
+</div>
+
+</div><!--/.page-->
+</div><!--/.body-->
+</div><!--/#main-->
+<footer>
+<div class="foot pvm">
+ <div class="page">
+ <b>Other places with great info include: </b><a href="http://eq.org.nz">eq.org.nz</a>
+ </div>
+</div>
+</footer>
+</div><!-- /container -->
+
+
+
+
+<!-- END MAIN BODY -->
+
+
+<!--[if lt IE 7 ]>
+<script src="js/libs/dd_belatedpng.js"></script>
+<script> DD_belatedPNG.fix('img, .png_bg');</script>
+<![endif]-->
+ <!-- asynchronous google analytics: mathiasbynens.be/notes/async-analytics-snippet -->
+  <script>
+   var _gaq = [['_setAccount', 'UA-21698263-1'], ['_trackPageview']];
+   (function(d, t) {
+    var g = d.createElement(t),
+        s = d.getElementsByTagName(t)[0];
+    g.async = true;
+    g.src = ('https:' == location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    s.parentNode.insertBefore(g, s);
+   })(document, 'script');
+  </script>
+  
+</body>
+
+<script src="js/libs/js_methods_arrays_tofixfuckingIE.js"></script>
+<!-- scripts for evently stuff (assumes jquery) BADLY NEED MINIFYING -->
+<script src="/_utils/script/json2.js"></script>
+<script src="/_utils/script/jquery.js"></script> <!-- NOTE THIS IS NOT JQUERY ITS SOME SORT OF CRAZY COUCHDB'FIED JQUERY -->
+<script src="/_utils/script/jquery.couch.js"></script>
+<script src="/_utils/script/sha1.js"></script>
+<script src="vendor/couchapp/jquery.couch.app.js"></script>
+<script src="vendor/couchapp/jquery.couch.app.util.js"></script>
+<script src="vendor/couchapp/jquery.evently.js"></script>
+<script src="vendor/couchapp/jquery.pathbinder.js"></script>
+<script src="vendor/couchapp/jquery.mustache.js"></script>
+<script src="js/md5.js"></script>
+<script src="js/app.js"></script>
+
+</html>

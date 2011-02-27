@@ -1,0 +1,496 @@
+/* ================ Libraries ================== */
+/*
+Copyright (c) 2008, Yahoo! Inc. All rights reserved.
+Code licensed under the BSD License:
+http://developer.yahoo.net/yui/license.txt
+version: 3.0.0pr2 (lines 9-11)
+*/
+/* reset */
+html{color:#000;background:#FFF;}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0;}table{border-collapse:collapse;border-spacing:0;}fieldset,img{border:0;}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}li{list-style:none;}caption,th{text-align:left;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}q:before,q:after{content:'';}abbr,acronym{border:0;font-variant:normal;}sup{vertical-align:text-top;}sub{vertical-align:text-bottom;}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;}input,textarea,select{*font-size:100%;}legend{color:#000;}
+/* fonts */
+body{font:13px/1.231 arial,helvetica,clean,sans-serif;*font-size:small;*font:x-small;}select,input,button,textarea{font:99% arial,helvetica,clean,sans-serif;}table{font-size:inherit;font:100%;}pre,code,kbd,samp,tt{font-family:monospace;*font-size:108%;line-height:100%;}
+/* 
+ * Box.net implementation of the OOCSS Open Source Project
+ * http://github.com/stubbornella/oocss/
+ * Copyright (c) 2009, Nicole Sullivan. All rights reserved.
+ * Code licensed under the BSD License
+ */
+ 
+/* ================ Template ================== */
+/* ----- Page Head, Body, and Foot ----- */
+body{color: #797979;font-family: Arial, Helvetica, sans-serif;font-size: 12px;background-color:#F2EFEF;_text-align:center;}/* IE5.5 */
+.main, .sub_nav_primary{display:table-cell;*display:block;width:auto;}
+.body,.main, .sub_nav_primary{*zoom:1;}
+.body:after,.main:after, .sub_nav_primary:after, .input:after{clear:both;display:block;visibility:hidden;overflow:hidden;height:0 !important;line-height:0;font-size:xx-large;content:" x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x ";}
+.page{margin:0 auto;width:950px;_text-align:left;} /* wraps other template elems to set width */ /* text-align IE5.5 */
+/* removed stuff about layout to style.css */
+/* ================ Grids ================== */
+.line:after,.last_unit:after{clear:both;display:block;visibility:hidden;overflow:hidden;height:0 !important;line-height:0;font-size:xx-large;content:" x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x ";}
+.line{*zoom:1;}
+.unit{float:left;-moz-box-sizing: border-box; box-sizing: border-box;}
+.unit_ext{float:right;zoom:1;}
+.size1of1{float:none;}
+.size1of2{width:50%;}
+.size1of3{width:33.33333%;}
+.size2of3{width:66.66666%;}
+.size1of4{width:25%;}
+.size3of4{width:75%;}
+.size1of5{width:20%;}
+.size2of5{width:40%;}
+.size3of5{width:60%;}
+.size4of5{width:80%;}
+.last_unit{display:table-cell;float:none;width:auto;*display:block;*zoom:1;_position:relative;_left:-3px;_margin-right:-3px;} 
+/* ================ Media ================== */
+.media{zoom:1;}
+.media:after, .bd:after{clear:both;display:block;visibility:hidden;overflow:hidden;height:0 !important;line-height:0;font-size:xx-large;content:" x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x ";}
+.drop_down_ext .media:after,.drop_down_ext .bd:after{content: "";}/* keeps the drop down from expanding */
+.media .bd{display:table-cell; zoom:1;}
+.media .bd > :first-child{margin-top:0;}
+.media .bd > :last-child{margin-bottom:0;}
+.img{float:left;margin-right: 10px;}
+.img img{display:block;}
+.img_ext{float:right; margin-left: 10px;}
+/* ================ Spacing ================== */
+/** 
+ * Spacing classes 
+ * Should be used to modify the default spacing between objects (not between nodes of the same object)
+ * Please use judiciously. You want to be using defaults most of the time, these are exceptions! 
+ * <type><location><size>
+ */
+ /* ====== Default spacing ====== */
+h1, h2, h3, h4, h5, h6, ul, ol,dl, p,blockquote, .media {margin:5px 0;}
+/*h1, h2, h3, h4, h5, h6,img{padding-bottom:0px;}*/
+pre{margin: 10px 0;}
+.body h2:first-child,.body  h3:first-child,.body  h4:first-child,.body  h5:first-child, .body h6:first-child, .body ul:first-child, .body ol:first-child,.body dl:first-child,.body p:first-child,.body blockquote:first-child,.body .media:first-child {margin-top: 0;}
+.body h2:last-child, .body h3:last-child, .body h4:last-child, .body h5:last-child, .body h6:last-child, .body ul:last-child, .body ol:last-child,.body dl:last-child, .body p:last-child,.body blockquote:last-child,.body  .media:last-child {margin-bottom:0;}
+.pan{padding:0 !important}
+.pas{padding:5px !important}
+.pam{padding:10px !important}
+.pal{padding:20px !important}
+.ptn{padding-top:0 !important}
+.pts{padding-top:5px !important}
+.ptm{padding-top:10px !important}
+.ptl{padding-top:20px !important}
+.prn{padding-right:0 !important}
+.prs{padding-right:5px !important}
+.prm{padding-right:10px !important}
+.prl{padding-right:20px !important}
+.pbn{padding-bottom:0 !important}
+.pbs{padding-bottom:5px !important}
+.pbm{padding-bottom:10px !important}
+.pbl{padding-bottom:20px !important}
+.pln{padding-left:0 !important}
+.pls{padding-left:5px !important}
+.plm{padding-left:10px !important}
+.pll{padding-left:20px !important}
+.phn{padding-left:0 !important;padding-right:0 !important}
+.phs{padding-left:5px !important;padding-right:5px !important}
+.phm{padding-left:10px !important;padding-right:10px !important}
+.phl{padding-left:20px !important;padding-right:20px !important}
+.pvn{padding-top:0 !important;padding-bottom:0 !important}
+.pvs{padding-top:5px !important;padding-bottom:5px !important}
+.pvm{padding-top:10px !important;padding-bottom:10px !important}
+.pvl{padding-top:20px !important;padding-bottom:20px !important}
+.man{margin:0 !important}
+.mas{margin:5px !important}
+.mam{margin:10px !important}
+.mal{margin:20px !important}
+.mtn{margin-top:0 !important}
+.mts{margin-top:5px !important}
+.mtm{margin-top:10px !important}
+.mtl{margin-top:20px !important}
+.mrn{margin-right:0 !important}
+.mrs{margin-right:5px !important}
+.mrm{margin-right:10px !important}
+.mrl{margin-right:20px !important}
+.mbn{margin-bottom:0 !important}
+.mbs{margin-bottom:5px !important}
+.mbm{margin-bottom:10px !important}
+.mbl{margin-bottom:20px !important}
+.mln{margin-left:0 !important}
+.mls{margin-left:5px !important}
+.mlm{margin-left:10px !important}
+.mll{margin-left:20px !important}
+.mhn{margin-left:0 !important;margin-right:0 !important}
+.mhs{margin-left:5px !important;margin-right:5px !important}
+.mhm{margin-left:10px !important;margin-right:10px !important}
+.mhl{margin-left:20px !important;margin-right:20px !important}
+.mvn{margin-top:0 !important;margin-bottom:0 !important}
+.mvs{margin-top:5px !important;margin-bottom:5px !important}
+.mvm{margin-top:10px !important;margin-bottom:10px !important}
+.mvl{margin-top:20px !important;margin-bottom:20px !important}
+/* ================ Table ================== */
+/** 
+ * Data Table 
+ * Allows you to align various table cells so that the alignment class can be placed on either the table, table row, or table cell 
+ * Cell takes precedence over table row and table
+ * Table row takes precedence over table
+ * admin_table		Styles the table to look like an admin table
+ */
+.data{position:relative; zoom:1;vertical-align: top;text-align: left; /*border-right:solid 1px transparent;*//* border fixes a FF2 bug which causes the data table to overlay its borders*/}
+.data table {width:100%; table-layout:fixed;}
+th, td{/*vertical-align:top;*/}
+/* horizontal alignment */
+.txt_c, table .txt_c td, table .txt_c th, .data .txt_c th, .data .txt_c td{text-align:center;}
+.txt_l, table .txt_l td, table .txt_l th, .data .txt_l th, .data .txt_l td{text-align:left;}
+.txt_r, table .txt_r td, table .txt_r th, .data .txt_r th, .data .txt_r td{text-align:right;}
+/* vertical alignment */
+.txt_t, table .txt_t td, table .txt_t th, .data .txt_t th, .data .txt_t td{vertical-align:top;}
+.txt_b, table .txt_b td, table .txt_b th, .data .txt_b th, .data .txt_b td{vertical-align:bottom;}
+.txt_m, table .txt_m td, table .txt_m th, .data .txt_m th, .data .txt_m td{vertical-align:middle;}
+/* admin table (extends data) */
+.admin_table table { table-layout: auto;}
+.admin_table th { padding: 3px; background: #f0f0f0; color: #333; font-weight: bold; border:2px solid #fff; }
+.admin_table td { padding: 3px 5px 5px 5px; }
+.admin_table tr:nth-child(odd) td { background: #F5F6F4; } /* Use JavaScript for IE */
+.admin_table .col_checkbox { width: 2em; }
+.admin_table th,.admin_table td{padding:3px 20px}
+.admin_table td{border-bottom: 1px solid #F5F6F4;}
+/* ================ Backgrounds ================== */ 
+/*.hover {background: #EFF7FC;}  Mockups also show #E9F0F5 */ 
+.selected {background: #cbe2f1;} /* PSD mockup shows #cbe2f1, flat PNG mockups show #EFF5F9. */
+ /* ================ Text ================== */ 
+.date {color: #808080; font-size: 11px;}
+.note {color: #808080; font-style: italic;}
+.legal {font-size: 11px;}
+strong {font-weight: bold;}
+em {font-style:italic;}
+/* ================ Headings ================== */
+/* Mockups show 24px, 19px, 17px, 15px, 14px, 13px, 12px */ 
+/* Mockups show #000, #333, #111, #414141, #545454, #7A7979, #59595A */ 
+/* Mockups show most bold, but a couple normal weight */ 
+/* Style rules: initial caps all important words */ 
+/* Use strong for single-word inline headings, like "Tip: ..." */
+h1, .h1 {margin: 10px 0;color: #333;font-size: 24px;font-weight: bold;border: none;padding-bottom:0;}
+h2, .h2 {margin: 10px 0;color: #333;font-size: 19px;font-weight: bold;border: none;padding-bottom:0;}
+h3, .h3 {margin: 5px 0;color: #333;font-size: 17px;font-weight: bold;border: none;padding-bottom:0;}
+h4, .h4 {margin: 5px 0;color: #333;font-size: 15px;font-weight: bold;border: none;padding-bottom:0;}
+h5, .h5 {margin: 5px 0;color: #111;font-size: 13px;font-weight: bold;border: none;padding-bottom:0;}
+h6, .h6 {margin: 10px 0;color: #797979;font-size: 12px;font-weight: bold;border-bottom: 1px solid #c5c5c5;padding-bottom: 5px;}
+/* ================ Links ================== */ 
+a {color: #1A74B0; text-decoration: none;}/* Mockups show some links with slightly lighter shade of blue. These should be changed to box.net blue (default link style). */
+a:visited {/*color: #789fb9;*/}/* should we have a visited color? if so, we need to know the visited color for all links */
+a:hover, a:focus {text-decoration: underline;}
+/* ----- specialized links ----- */
+.lowlight {color: #797979 !important;}
+.midlight {font-weight: bold;}
+.highlight {color: #000; font-weight: bold;}
+.highlight:visited {color: #333;}
+.drop_link{padding-left:8px; padding-right:8px; }
+a.drop_link:hover{background:url(img/arrow.png) no-repeat 100% 5px;}
+/* ================ Mixins ================== */
+.break{word-wrap:break-word;}
+.completed{background-color:#f2f2f2;}
+/* ================ Lists ================== */
+/* ----- plain list ----- */
+.plain_list {margin: 10px 0;} /* zoe, where is this used? */
+.plain_list li {margin: 5px 0;}
+/* ----- simple list (no bullets) ----- */ 
+.simple_list{margin: 10px 0;}
+/* ----- sprite ----- */
+.sprite{background: url(img/icons_resources.gif) no-repeat 0 0;}
+.link_trash {background-position: 0 0;}
+.link_help {background-position: 0 -22px;}
+.link_forum {background-position: 0 -42px;}
+.link_report {background-position: 0 -64px;}
+ /* ----- inline list ----- */ 
+.inline_list li { display:inline-block;*display:inline; zoom:1; padding-right: .5em; vertical-align: top;}
+/* ----- inline list extended ----- */
+.inline_list_ext li {display: inline; *padding-right: 5px;}
+.inline_list_ext > li:after {content: "\2022"; padding: 0 4px 0 7px;}
+.inline_list_ext li:last-child:after {content: "";}
+/* ----- extended list ----- */
+.list_ext > li {position: relative; border-bottom: 1px solid #e9e9e9;padding: 10px 5px;}/* figure out child selector or clear styles */
+.list_ext > li:hover {background: #EFF7FC;}
+.list_ext .selected {background-color: #cbe2f1 !important;}
+/* ----- icon view ----- */
+/* the code for icon_view should not be used as a model for new objects. */
+.icon_view{overflow:hidden;_overflow:visible; zoom:1;}
+.icon_view .icon_view_item{position:relative;float:left; margin-right:15px; width:88px;_width:90px; height: 107px; overflow:hidden; text-align: center;background-color:none !important;/*border:none;*/}
+.icon_view .media{margin:0;}
+.icon_view > li:hover{background-color:transparent;}
+.icon_view .img{width: 78px; height:78px;border:1px solid #D3D3D3; display:block; }
+.icon_view .img img{display:inline-block;zoom:1;}
+.icon_view > li a:hover{border-color: #7AB9E2;}
+.icon_view .action,.icon_view .file_action_tasks, .icon_view .file_action_share{display:none;}
+.icon_view .more_item{display:block;position:absolute; top:13px; right:9px;}
+.icon_view .img{float:none;clear:both;padding:5px;}
+.icon_view .inline_list_ext{display:none;}
+.icon_view h5{white-space:nowrap;font-weight:normal; font-size:12px; text-overflow: ellipsis;}
+.bkg{font-size:1px;position:absolute; bottom:0; right:0;display:none;}/* find a better way to hide this text */
+.thumb{height: 30px; width: 30px; background: url("https://e3.boxcdn.net/resources/aa0h1p2bf1/thumbs/24x24/folder_collaborated.gif") no-repeat center 0;}/* tiny icons */
+.icon_view .thumb{ background-image: url("https://e3.boxcdn.net/resources/aa0h1p2bf1/thumbs/48x48/folder_collaborated.gif");} /* large icons */
+.icon_view .preview img{height:76px; width:76px;}
+.icon_view .file_icon {position: relative; margin-bottom: 5px; zoom:1;}
+.icon_view .badge {display:none;}
+.icon_view a.file_type { display:inline-block;*display: inline; zoom:1; width: 88px; height: 88px; border: 1px solid #d3d3d3; text-align: center; vertical-align: middle;}/* The above horizontally centers but does not vertically center the icons in IE 6 and 7. If this is not an acceptable degradation, we can use a more hacky vertical centering method instead. */ 
+.icon_view a.file_type img {display: inline;margin-top: 5px;}
+.icon_view a.file_type:hover {border: 1px solid #7AB9E2;}
+.file_properties {position:absolute; left:-23px; top:15px;}
+.icon_view .file_properties {left: 9px; bottom: 31px; top:auto; margin: 0;}
+.icon_view .file_properties li {display:inline-block;*display: inline; zoom:1; vertical-align:middle; width:auto; margin:0 5px 0 0;}
+.file_properties a {display: inline-block;}
+.file_shared {width: 16px; height: 8px; background: url(img/icon_shared.png) no-repeat;}
+.file_task {width: 16px; height: 16px; background: url(img/icon_task.png) no-repeat;}/* The two background images above can be sprited. */
+/* ----- File Action List ----- */
+.action_list a {-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";filter: alpha(opacity=0);opacity: 0;}
+li.on .action_list a {-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";filter: alpha(opacity=60);opacity: .6;}
+li.on .action_list a.on {-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";filter: alpha(opacity=100);opacity: 1;}
+.action_list .action a{background: url(img/all_item_parts.gif) no-repeat 20px 20px; height:18px; color: #fff; display:inline-block; zoom:1; vertical-align:top; text-align:center;font-weight: bold;text-decoration:none;}
+.action_list .action a span {font-size: 0px; height:0; width:0; visibility:hidden;position:absolute;bottom:0; right:0;}
+.action_list .tag_item a{background-position: -9px -418px;width: 21px;}
+.action_list .comment_item a{background-position: -11px -469px; width:19px;padding-top: 1px;}
+.action_list .more_item a{background-position: -9px -684px;width:19px;}
+.action_list .select a{background-position: -9px -540px;width: 15px;}
+.action_list .off{visibility:hidden;}/* add class "off" to and list item that should not show in the current view */
+/* highlight states */
+.selected .action_list a,
+li:hover .action_list a,
+li.hover .action_list a, /* IE6 */
+.action_list .on,
+.action_list a:hover,
+.action_list a:focus {-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";filter: alpha(opacity=100);opacity: 1;}
+.action_list .tag_item .on, 
+.action_list .tag_item a:hover{background-position: -9px -375px;}
+.action_list .comment_item a:hover{background-position: -10px -85px;}
+.action_list .comment_item a.on{background-position: -10px -122px;}
+.action_list .more_item .on, 
+.action_list .more_item a:hover{background-position: -9px -618px;}
+.selected .action_list .select a, 
+.action_list .select a:hover{background-position: -9px -575px; }
+.action_list {float:right; font-size: 11px; margin-top: -1.5em;}
+.action_list li {display:inline-block; *display:inline;zoom:1; padding: 0 0 0 7px; vertical-align:top;}
+.action_list li.file_action_tasks, .action_list li.file_action_share {width: 5em;}
+/* ----- File Info List ----- */
+.file_info_list {overflow:auto;/*float containment*/}
+.file_info_list dt {float: left; clear: left; margin: .2em .3em 0 0;}
+.file_info_list dd {/*float: left;*/ margin-top: .2em;}
+/* ----- File Info List Ext (extends file info list) ----- */
+.file_info_list_ext dt{width: 279px;text-align:right;}
+/* ----- Expansion List ----- */
+.expansion_list{}
+.expansion{clear:both;}
+.expansion_list li {padding: 5px; border-bottom: 2px solid #fff;background-color: #eff7fc; color: #555;zoom:1;}
+.expansion_list li li {border-bottom: none;}
+.expansion_list b.arrow_up {float:left; /*margin-top: -10px;*/display: block;width: 0;height: 0;border-style: solid;border-width: 0 10px 10px 10px;font-size: 1px; /* for IE 6 */margin-left: 25px;border-color: transparent transparent #eff7fc transparent;_border-color: #fff #fff #eff7fc #fff; /* for IE 6 */ _margin-bottom:-5px;}
+/* ----- comment, task, and shared lists (extend expansion_list) ----- */
+.comment_list b.arrow_up {float:right; margin-right:83px;}
+.task_list b.arrow_up{float:right; margin-right:200px;}/* may need to adjust exact position */
+.shared_list b.arrow_up{float:right; margin-right:139px;}/* may need to adjust exact position */
+/* EXTRACT STYLES*/ 
+.expansion_list .media {margin: 0; padding: 0; zoom:1;}/* TODO: remove this */
+.expansion_list form {padding-left: 40px; background: url(img/icon_comment_field.gif) no-repeat 20px 50%;}
+.expansion_list input {width: 98%;}
+.expansion_list .view_all {padding: 7px 0 9px 55px; background-image: url(img/icon_expansion_multiple.gif); background-repeat: no-repeat; background-position: 30px 50%;}
+/* /EXTRACT STYLES */ 
+/* ----- breadcrumb list (in header) ----- */
+.breadcrumb, .breadcrumb:first-child, .breadcrumb:last-child {margin: 5px 0; padding-left: 12px; background: url(img/icon_folder-tree.gif) no-repeat 0 40%;}
+ /* For the page-specific breadcrumbs. */ 
+.breadcrumb li {display: inline; *padding-right: 5px;}
+.breadcrumb li:after {content: "\003E"; display: inline-block; zoom:1; padding: 0 4px 0 7px; color: #1A74B0;}
+.breadcrumb li:last-child:after {content: "";}
+ /* ----- file breadcrumb list (in main content area) ----- */
+ /* For the file-specific breadcrumbs, seen on updates list and discussions list. 
+  * I changed the design on the discussions list breadcrumbs to match the updates list breadcrumbs. 
+	*/ 
+.breadcrumb_files {margin: 0; padding: 2px 0 0 0; font-size: 11px; display:inline; display:inline-block;*display:inline;zoom:1;}
+.breadcrumb_files li {display: inline-block; *display:inline; zoom:1; *padding-right: 5px;}
+.breadcrumb_files li:before {content: "\003E"; display: inline-block; zoom:1; padding: 0 6px 0 4px;}
+.breadcrumb_files li:first-child:before {content: ""; padding: 0;}
+.breadcrumb_files a{color: #797979;}
+/* ----- Updates List ----- */
+/* is this used anymore? */
+.updates_list {margin:0;}
+.updates_list .update_desc {margin-bottom: 20px;}
+.updates_list .update_action {float: left; margin: 0; padding: 0 0 3px 18px; background-repeat: no-repeat; background-position: 0 40%;}
+.updates_list .update_action_comment {background-image: url(img/icon_update_comment.gif);}/* The following four items are example actions that each have their own icon. They can be sprited instead, but I don't have all the images to do that for them */ 
+.updates_list .update_action_download {background-image: url(img/icon_update_download.gif);}
+.updates_list .update_action_upload {background-image: url(img/icon_update_upload.gif);}
+.updates_list .update_action_preview {background-image: url(img/icon_update_preview.gif);}
+.updates_list .breadcrumb_files {float: right; margin: 0 10px 0 0;}
+.updates_list hr {clear: both;}
+.updates_list .divider {margin: 0;}
+.updates_list .cntr_expansion {margin-left: 30px;}
+.updates_list .expansion_list li {border-bottom: 2px solid #fff;}
+.updates_list .view_all {display: inline-block; *display:inline; zoom:1; padding: 7px 0 9px 45px; background: url(img/icon_files_multiple.gif) no-repeat 10px 50%;}
+/* ----- view options ----- */
+/* still used? removable? */
+.view_options {position: absolute; right: 0; bottom: 5px;}
+.view_options li {padding-right: .8em;}
+.view_options li li {padding-right: .3em;}
+/* ----- basic vertical list ----- */
+.basic_list {margin: 10px 0;}
+.basic_list li {padding: .2em 0;}
+.basic_list_sm li{margin: 5px 0;}
+.basic_list_med li{margin: 10px 0;}
+.basic_list_lg li{margin: 20px 0;}
+/* ================ Forms ================== */
+ul.fieldsets .fieldset{background: #F6F6F6;-moz-border-radius: 9px;-webkit-border-radius: 9px;border-radius: 9px;margin-bottom:5px;}
+.cntr_fieldset {zoom: 1; /* OK here? */}
+fieldset {background: #F0F0F0;zoom: 1;padding: 15px;-moz-border-radius: 9px 0 0 9px;-webkit-border-top-left-radius: 9px;-webkit-border-bottom-left-radius: 9px;border-radius: 9px 0 0 9px;vertical-align: top;}
+.form_tip {float:right;zoom: 1;width: 200px; padding:20px;font-size: 13px;vertical-align: baseline;}
+legend {/* Just use h3 class for text styling? */width: 100%;padding-bottom: 5px;border-bottom: 1px solid #bebebe;color: #333;font-size: 17px;font-weight: bold;}
+fieldset li {zoom: 1;}
+/* Style ryles: initial caps all important words? colon at end? */
+label {display: inline-block;zoom: 1;width: 172px;padding: 0 7px 1px 0;color: #545454;font-size: 13px;text-align: right;vertical-align: baseline;}
+label.long{vertical-align:middle;}
+.form_field {/* Wrapper div for form field. Rename cntrFormField? */display: inline-block; *display:inline; zoom: 1;width: 260px;padding: 0 0 10px 0;vertical-align: baseline;}
+input[type=text], .input, textarea {width: 262px;padding: 5px;-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;border: 1px solid #c3c3c3; border-color: rgba(0, 0, 0, 0.25);-moz-box-shadow: inset 0 2px 0 #EBEBEB; /* Need to use inset box-shadow, gradients, or image. */-webkit-box-shadow: inset 0 2px 0 #EBEBEB;box-shadow: inset 0 2px 0 #EBEBEB; color:#797979;}
+.input_small{}
+.input_medium{width:300px !important;}
+.input_large{width:375px !important;}
+.form_field input {width: 100%;}
+.number {width: 3em;}
+textarea {vertical-align:top;}
+select {width: 100%;padding: 5px;border: 1px solid #B5B5B5;background: #F6F6F6; /* Need to add inset box-shadow, gradients, or image for inner gray gradient background. */color: #1A74B0;font-size: 13px;font-weight: bold;}
+.form_help {display: inline-block; *display:inline; zoom: 1;width: 235px;padding: 0 0 10px 7px;vertical-align: top;}
+.search_form {margin: 10px 0 0 0;}
+.search_form .search_field {width: 190px;padding: 5px 10px 5px 30px;border: 1px solid #105F95;-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px;-moz-box-shadow: 0 0 0 1px hsla(0,0%,100%,.3), inset 0 6px 8px -4px #ccc;-webkit-box-shadow: 0 0 0 1px hsla(0,0%,100%,.3);box-shadow: 0 0 0 1px hsla(0,0%,100%,.3);background: #FFF url(img/icon_search.gif) no-repeat 9px 7px; /* Need to add inset box-shadow, gradients, or image for inner gray gradient background. */color: #797979;font-size: 11px;}
+/* ----- narrow form ----- */
+.pop_form label,
+.pop_form input[type=text],
+.pop_form textarea,
+.pop_form .form_help{display:block; width:100%;*width:96%;text-align:left;}/* depends on box-sizing: border-box method on normal input */
+.pop_form .form_help{padding-left:0;}
+/* ----- radio ----- */
+.radio_label{width:auto;display:block; overflow:hidden;text-align:left;}
+input[type=radio],input[type=checkbox]{vertical-align:middle;margin-right:5px;/*margin-left:180px;*/float:left;margin-top:3px;}
+input[type=checkbox]{margin-top:2px;}
+/* ----- Progress bar ----- */ 
+.cntr_progress {position: relative;width: 177px;padding: 5px 10px;border: 1px solid #B5CEDD;-moz-box-shadow: inset 0 2px 0 hsla(0,0%,0%,.05); /* Need to use inset box-shadow, gradients, or image. */-webkit-box-shadow: inset 0 2px 0 hsla(0,0%,0%,.05);box-shadow: inset 0 2px 0 hsla(0,0%,0%,.05);}
+.progress_bar {position: absolute;top: 0;left: 0;height: 100%;margin: -1px;border: 1px solid #1A74B0;-moz-box-shadow: inset 0 1px 0 hsla(0,0%,100%,.4); /* Need to use inset box-shadow, gradients, or image. */-webkit-box-shadow: inset 0 1px 0 hsla(0,0%,100%,.4);box-shadow: inset 0 1px 0 hsla(0,0%,100%,.4);background: #8DBAD6;}
+.progress_text {position: relative;color: #000;} 
+/* ----- Date Picker ----- */
+.input input{border:none; padding:0; margin:0; width: 210px;box-sizing: border-box;-moz-box-shadow: none;-webkit-box-shadow: none;box-shadow: none;}
+.cal_icon{background: url(img/icon_cal.png) no-repeat 0 0; height: 16px; width:16px; float:right;}
+.delete_icon,.delete_icon:hover,.delete_icon:focus{float:right; color:#da0000; font-size:20px;line-height:13px;margin:0 5px; text-decoration:none;}
+.cal_icon:active{height:15px;margin-bottom:1px;}
+.cal_icon:active, .delete_icon:active{position:relative; top: 1px;}
+/* ----- Buttons ----- */ 
+button { cursor:pointer; font-size: 13px; margin: 5px; display: inline-block; zoom:1; padding: 4px 11px; font-weight: bold; color: #1A74B0;border: 1px solid #d9d9d9;border-bottom-color:#949494; border-color:rgba(0,0,0,0.15); border-bottom-color:rgba(0,0,0,0.4); background-color:transparent; text-decoration: none; -moz-border-radius: 6px; -webkit-border-radius: 6px; border-radius: 6px; -moz-box-shadow: 0 1px 0 rgba(0,0,0,0.1); -webkit-box-shadow: 0 1px 0 rgba(0,0,0,0.1); position: relative; cursor: pointer;background-color: #fff\9; background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0.34, rgba(255,255,255,0.0)),color-stop(0.78, rgba(255,255,255,0.7))); background-image:-moz-linear-gradient(center bottom,rgba(255,255,255,0.0) 34%,rgba(255,255,255,0.7) 78%); }
+.lowlight_button { border:none; font-weight:normal; background-image: none; border: 1px solid #c7c7c7; -moz-box-shadow: 0 1px 2px rgba(0,0,0,0.0); -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.0);}
+.ext_button {width: 232px; text-align: left;}
+.gray { background-color: #dddddd;}
+button:hover, button:focus, button.hover {border: 1px solid #949494; border-color: rgba(0,0,0,0.40); outline: none;}
+button:active, button.active { top: 1px; position: relative; -moz-box-shadow: none; -webkit-box-shadow: none;}
+/* ----- Multi-part Buttons (extends ul) ----- */ 
+/*.multi_button, .multi_button:first-child { margin: 5px;}*/
+.multi_button li { display: inline-block; *display:inline; zoom:1; border: none; padding: 0;}
+.multi_button li:first-child button { -moz-border-radius: 6px 0 0 6px; -webkit-border-radius: 6px 0 0 6px; border-radius: 6px 0 0 6px; margin: 0;}
+.multi_button li:last-child button { margin-left: -1px; -moz-border-radius: 0 6px 6px 0; -webkit-border-radius: 0 6px 6px 0; border-radius: 0 6px 6px 0;}
+.multi_button li button { -moz-border-radius: 0; -webkit-border-radius: 0; border-radius: 0; margin: 0 0 0 -1px;}
+/* ----- Dropdown buttons ------ */
+.dual_dropdown_ext { padding-right: 20px;}
+.dual_dropdown_button {	padding-right: 2px;}
+.dual_dropdown_arrow { padding-right: 2px; padding-left: 0;}
+.dropdown_part{padding-left:0;}
+button .toggle {padding: 6px 0 0 6px; position: relative; display: inline-block; *display:inline;zoom:1;}
+.dual_dropdown_arrow .toggle { margin-left: -4px;}
+button .toggle .arrow { border-width: 3px 3px 0 3px; border-color: #333 transparent; position: static; padding-bottom: 3px;}
+.dropdown .toggle { padding: 6px 0 0 0;}
+/* ----- input button ----- */
+.input_button{-moz-border-radius: 0; -webkit-border-radius: 0;border-radius: 0;}
+/* ----- disabled button ----- */
+.disabled {background-color: transparent;}
+/* ----- input button (extends multi_button) -----*/
+.multi_input_button li:last-child button{-moz-border-radius: 0; -webkit-border-radius: 0;border-radius: 0;}
+.multi_input_button button{height:26px;width: 26px;padding:0; vertical-align:top;-moz-box-shadow: none; -webkit-box-shadow: none;border: 1px solid #c2c2c2;border-color: rgba(0, 0, 0, 0.25);}
+.multi_input_button input{vertical-align:top;height:26px;*height:14px;*position:relative; *top:1px;*right:-1px;}
+.multi_input_button span{display:inline-block; zoom:1;}
+/* ----- password_strength ----- */
+.password_strength li{border-color: #bfbfbf;border: 1px solid #cbcbcb; height:16px; width:20px;display:inline-block; *display:inline; zoom:1; *margin-right:3px !important;/* why does this need to be important? weird. */ vertical-align:middle;}
+.password_strength li.text_desc{border:none; width:35px; margin-top:2px; text-align:right;}
+.weak .weak{border-color: #da0000;background-color: #ec7f7f;/*border-color: rgba(218,0,0,1); background-color: rgba(218,0,0,0.5);*/}
+.ok .weak, .ok .ok{border-color: #f7941d;background-color: #fbc98e;/*border-color: rgba(247,148,29,1); background-color: rgba(247,148,29,0.5);*/}
+.good .weak, .good .ok, .good .good{border-color: #f4e700;background-color: #f9f37f;/*border-color: rgba(244,231,0,1); background-color: rgba(244,231,0,0.5);*/}
+.great .weak, .great .ok, .great .good, .great .great{border-color: #197b30;background-color: #8cbd97;/*border-color: rgba(25,123,48,1); background-color: rgba(25,123,48,0.5);*/}
+/* ----- blue mixin ----- */
+.box_form button, .box_form input, .box_form textarea{border-color: #b9cbd6;}
+/* temporary theming test - DO NOT USE */
+.e9e9e9{background-color:#ebf3f8;}
+.green, .green:visited{ background-color: #e3eec1/*#91bd09 rgba(145, 189, 9, 0.25)*/; }
+button.green:hover{ background-color: #749a02; }
+.blue, .blue:visited{ background-color: #caebef /*#2daebf rgba(45, 174, 191, 0.25)*/; }
+button.blue:hover{ background-color: #007d9a; color: #fff; }
+.red, .red:visited{ background-color: #f8cbbf /*#e33100 rgba(227, 49,0, 0.25)*/; }
+button.red:hover{ background-color: #872300; }
+.magenta, .magenta:visited{ background-color: #e9bfd2 /*#a9014b rgba(169,1,75,0.25)*/;}
+button.magenta:hover{ background-color: #630030; }
+.orange, .orange:visited{ background-color: #ffd6bf /*#ff5c00 rgba(255,92,0,0.25)*/;}
+button.orange:hover{ background-color: #d45500; }
+.yellow, .yellow:visited{ background-color: #ffecc4 /*#ffb515 rgba(255,181,21,0.25)*/; }
+button.yellow:hover{ background-color: #fc9200; }
+/* ================ Badges ================== */
+.badge {display: inline-block; *display:inline; zoom:1; padding: 1px 3px;-moz-border-radius: 3px;-webkit-border-radius: 3px;border-radius: 3px;font-size: 11px;font-weight: bold;text-align:center;}
+.update {background: #FF8000; color: #FFF;}
+.upgrade {background: #c0daec; color: #1A74B0;}
+.role {background: #ebebeb; color: #666;}
+.status {background: #666; color: #FFF;}
+.filter {background-color: #1A74B0; color: #fff; padding: 1px 15px;position:relative;}
+.filter .remove{position:absolute; right:4px; top: 2px;color: #fff;visibility:hidden; text-decoration:none;font-weight:normal;}
+.filter:hover .remove,.hover .remove{visibility:visible;}/* .hover is for IE6 only, no js for better browsers */
+/* ================ Dividers ================== */ 
+hr {height:0; border:none;}
+hr.divider {margin: 0 0 5px 0; border:none; border-top:1px dotted #d9d9d9;}
+hr.divider_strong {margin: 0 0 5px 0; border:none; border-top:2px solid #d3d3d3;}
+/* ================ Containers ================== */
+.cntr {margin: 5px 0;}
+.cntr:first-child {margin-top:0;}
+.cntr:last-child {margin-bottom:0;}
+/* ----- options menu (wrapper for other containers) ----- */
+.options_parent{position:relative;} /* fill out if you need this for JS */
+.options_child{position:absolute;top:100%; left:0;z-index: 100;}
+.options_child .cntr {float:left;}
+/* ----- feature ----- */
+.feature { /* Used on admin getting started page */padding: 17px;border: 1px solid #e2e2e2;-moz-border-radius: 7px;-webkit-border-radius: 7px;border-radius: 7px;}
+/* ----- drop down ----- */
+.drop_down {position: relative;padding: 1px 10px;border: 1px solid #bdbdbd;border-top: none;-moz-border-radius: 0 0 7px 7px;-webkit-border-bottom-right-radius: 7px;-webkit-border-bottom-left-radius: 7px;border-radius: 0 0 7px 7px;-moz-box-shadow: 0 0 3px hsla(0,0%,0%,.15); background-color:#ffffff;}
+.drop_down_ext {padding: 10px;border: 1px solid #bdbdbd;-moz-border-radius: 7px;-webkit-border-radius: 7px;border-radius: 7px;-moz-box-shadow: 0 0 3px hsla(0,0%,0%,.15); background-color:#fff;}
+.actions {padding: 6px 10px;background: #f2f2f2;-moz-border-radius: 4px;-webkit-border-radius: 4px;border-radius: 4px;}
+/* ----- toggle ----- */
+.toggle { position: relative; }
+.toggle .arrow { border-style: solid; display: block; position:absolute; font-size: 1px; height: 0px; width: 0px;}
+.shut .arrow {top: 5px;right: 10px;border-width: 3px 3px 0 3px;border-color: #717171 #fff #fff #fff; /* for IE 6 */border-color: hsla(0,0%,20%,.7) transparent transparent transparent;}
+.open .arrow {top: 5px;right: 10px;border-width: 0 3px 3px 3px;border-color: #fff #fff #717171 #fff; /* for IE 6 */border-color: transparent transparent hsla(0,0%,20%,.7) transparent;}
+.shut .bd {display:none;}
+/* ----- confirmation ----- */
+.confirmation{border:1px solid #e9e9a7;-moz-border-radius: 7px;-webkit-border-radius: 7px;border-radius: 7px;background-color:#ffffdd;padding: 10px;-moz-box-shadow: inset 0 3px 0 -2px #FFF;-webkit-box-shadow: inset 0 3px 0 -2px #FFF;box-shadow: inset 0 3px 0 -2px #FFF;}
+/* ----- Popups ----- */
+html.pop {overflow:hidden;}
+.cntr_popup {background-color: #f1f1f1;width: 405px;margin: 100px auto 0 auto;-moz-box-shadow: 0 0 1px 4px hsla(0,0%,20%,.5);-webkit-box-shadow: 0 0 1px 4px hsla(0,0%,20%,.5);box-shadow: 0 0 1px 4px hsla(0,0%,20%,.5);border: 4px solid #8f9395;border: 1px solid hsla(0,0%,20%,.7);-moz-border-radius: 9px;-webkit-border-radius: 9px;border-radius: 9px;}
+.cntr_popup .hd {padding-left: 13px; padding-right:13px; background: #fff; border-bottom: 1px solid #b9b9b9; -moz-border-radius: 10px 10px 0 0; -webkit-border-top-left-radius: 10px; -webkit-border-top-right-radius: 10px; border-radius: 10px 10px 0 0;}
+.cntr_popup .ft {padding: 13px 20px; background: #e6e6e6; color: #333; -moz-border-radius: 0 0 10px 10px; -webkit-border-bottom-left-radius: 10px; -webkit-border-bottom-right-radius: 10px; border-radius: 0 0 10px 10px;text-align:center;}
+.popup_overlay {position: absolute; top:0; left:0; z-index:100; width:100%; height:100%; background: hsla(0,0%,0%,.15);}
+/* ----- Tooltips ----- */ 
+.tooltip {position:relative;}
+.tooltip_box {/* Styles for block tooltips, not nested inside links. */display: inline-block; *display:inline; zoom:1; position: relative; width: 200px;}
+.tooltip .tooltip_box {/* Styles for span tooltips nested inside links. */display: none;position: absolute;}
+.tooltip:hover .tooltip_box, .tooltip:focus .tooltip_box {display: inline-block;*display:inline; zoom:1;}
+.down {padding-bottom:10px; bottom:10px; left:0;}
+.up {padding-top:10px; top:10px; left:0;}
+.tooltip .inner, .tooltip_box .inner {display: inline-block;*display:inline; zoom:1; padding: 10px;background: #717171;background: hsla(0,0%,20%,.7);color: #fff;-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px;}
+.tooltip_box b {/* Arrow */display: block;position: absolute;width: 0;height: 0;border-style: solid;font-size: 1px; /* for IE 6 */}
+.down b {bottom: 0;left: 10px;border-width: 10px 10px 0 10px;border-color: #717171 #fff #fff #fff; /* for IE 6 */border-color: hsla(0,0%,20%,.7) transparent transparent transparent;}
+.up b {top: 0;left: 10px;border-width: 0 10px 10px 10px;border-color: #fff #fff #717171 #fff; /* for IE 6 */border-color: transparent transparent hsla(0,0%,20%,.7) transparent;}
+.tooltip .inner p,tooltip_box .inner p {margin:0;}
+.tooltip .inner h4,.tooltip_box .inner h4 {margin:0; color:#fff;}
+/* ----- tabular_nav ----- */ 
+.tabular_nav {display:table-row; _zoom:1; margin:0; *margin-bottom: -1px;}
+.tabular_nav li {display:table-cell; *display:inline; vertical-align:middle;}
+.tabular_nav a {display:inline-block; zoom:1;position: relative;margin: 0 2px 0 0;padding: 7px 10px;border: 1px solid #BCC8D1;border-bottom: none;-moz-border-radius: 3px 3px 0 0;-webkit-border-top-left-radius: 3px;-webkit-border-top-right-radius: 3px;border-radius: 3px 3px 0 0;-moz-box-shadow: inset 0 1px 0 hsla(0,0%,100%,.7);-webkit-box-shadow: inset 0 1px 0 hsla(0,0%,100%,.7);box-shadow: inset 0 1px 0 hsla(0,0%,100%,.7);text-decoration:none;}
+.tabular_nav .current {margin-bottom: -1px;padding-bottom: 8px;background-color: #fff;color: #545454;cursor: default;}
+.tabular_nav a:hover, .tabular_nav a:focus {background-color: #fff; margin-bottom: -1px; padding-bottom: 8px;}
+/* ----- popup tabular_nav (extend tabular_nav)----- */
+.pop_tabular_nav .current,.pop_tabular_nav a:hover, .pop_tabular_nav a:focus {background-color: #f1f1f1;}
+/* ----- Images ----- */ 
+.icon {margin-right: 5px;}
+.mini_avatar, .mini_avatar img { width: 30px; height:30px;}
+.avatar {width: 40px; height: 40px;}/* necessary? all img should have an explicit size */
+.avatar_ext {width: 40px; height: 40px; padding: 3px; border: 1px solid #dfdfdf; background: #fff;}
+/* ----- Color Picker ----- */
+.color_picker span.hash{float: left;margin-top: 3px;margin-right: 3px;}
+.color_picker input{height: 22px;*height: 16px;width: 60px;float: left;padding: 2px;}
+.color_picker a{cursor: pointer;}
+.color_picker a span{border-style: solid;border-width: 5px 5px 0 5px;font-size: 1px;border-color: #2184C6 transparent transparent transparent;*border-color: #2184C6 #fff #fff #fff;float: left;width: 0;height: 0;margin: 8px 0 0 4px;}
+.color_picker span.selected_color{float: left;height: 16px;width: 16px;padding: 2px;background-color: #fff;border: solid #a3a3a3 1px;border-left: none;}
+.color_picker span.selected_color span{display: block;width: 16px;height: 16px;background-color: #247ebb;}

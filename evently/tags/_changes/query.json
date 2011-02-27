@@ -1,0 +1,5 @@
+{
+  "view" : "by_tag",
+  "group_level" : 1,
+  "reduce":true
+}
