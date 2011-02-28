@@ -7,6 +7,9 @@ function(doc) {
 		if (doc.raw_text.match(/\#offer/)) {
 			type="offer";
 		}
+		else if (doc.raw_text.match(/\#need/)) {
+			type="need";
+		}
 		else {			
 			for(var idx in doc.tags) {
 			   if (doc.tags[idx].type=="msg_type") continue;
