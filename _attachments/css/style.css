@@ -149,11 +149,13 @@ display: inline;
 margin: 0px 7px;
 }
 
-.navigation ul li a, .navigation ul li a:visited {
-color: #666;
-text-decoration: none;
-font-size: 0.95em;
+
+.addyours a , .navigation ul li a, .navigation ul li a:visited {
+color: inherit; /*#666;*/
+text-decoration: underline;
+font-size: 1.2em;
 }
+
 
 h1, h2, h3, h4, h5 {
 font-family: myriad pro, tahoma;
@@ -249,12 +251,66 @@ ul, li, ol {
 	padding: 0px;
 }
 
-.filterbox {
+/*
+.typebox {
 margin-bottom: 10px;
 -webkit-border-radius: 15px;
 -moz-border-radius: 15px;
 border-radius: 15px;
 background: #fff;
+} */
+
+.typebox ul li {
+	display: inline;
+	padding-bottom: 5px;
+	height: 20px;
+	line-height: 20px;
+	white-space:nowrap;
+}
+
+.typebox ul li a, .typebox ul li a:visited {
+	text-decoration: underline;
+	font-size:1.2em;
+	line-height: 35px;
+}
+
+.typebox ul li a:hover, ul li a.current {
+	color:#FE6F1F
+}
+
+.typebox ul li.button a, .typebox ul li.button a:visited {
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	text-decoration: none;
+	font-size:1.3em;
+	padding: 5px 15px;
+	height: 20px;
+	background: #D4E8F4;
+	color: #163F58;
+}
+
+.typebox ul li.button a.current, .typebox ul li.button a.current:visited {
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+	background: #fff; /* #D4E8F4; */
+	color: #163F58;
+}
+
+.typebox ul li.button a:hover, .typebox ul li.button a.current:hover {
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+	background: #fff; /* #D4E8F4; */
+	color: #163F58;
+}
+
+.filterbox {
+	margin-bottom: 10px;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+	background: #fff;
 }
 
 .filterbox ul li {
@@ -322,7 +378,8 @@ list-style:inherit;
 .foot {background:#999;border-top: 1px solid #777;}
 .foot .copyright {margin-right: 20px;}
 .foot .inline_list {padding: 10px;}
-
+.foot A, .foot A:hover { color:#000; text-decoration:underline;}
+.foot A:visited { color:#222; text-decoration:underline;}
 
 /*
     // ========================================== \\

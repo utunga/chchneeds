@@ -1,3 +1,3 @@
 function(e) {
-	$(this).trigger("_changes");
+	$(this).trigger("refresh");
 };

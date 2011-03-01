@@ -1,12 +1,12 @@
-Quick thing to get something out to ChCh where
-folks can tweet (and hopefully, soon, 'txt' to say
+Quick thing to get something out for ChCh so
+folks can tweet (and hopefully, soon, 'txt') to say
 they need help at a given location, or have an offer
-of help..) and to let them find each other by map, list, or other means
+of help
+
+All about letting them find each other by map, list, or other means
 
 some mockups here:
 http://www.flickr.com/photos/utunga/sets/72157625993146931/
 
-data - just test data for now - available at couchone.. eg
-http://chchneeds.couchone.com/testing/_design/couchapp/_view/all?reduce=false
-http://chchneeds.couchone.com/testing/_design/couchapp/_view/by_loc?group_level=2
-
+data available at 
+http://chchneeds.org.nz/cdb/_utils

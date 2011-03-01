@@ -27,7 +27,7 @@ function(e) {
     else {
       //location and tag
       return {
-        view : "by_loc_tag_type",
+        view : "by_loc_tag",
         limit : 25,
         startkey : [loc, tag, {}],
         endkey : [loc, tag],
@@ -42,7 +42,7 @@ function(e) {
     if (tag==undefined) {
       //location and type
       return {
-        view : "by_loc",
+        view : "by_loc_type",
         limit : 25,
         startkey : [loc, type, {}],
         endkey : [loc, type],
@@ -54,7 +54,6 @@ function(e) {
     }
     else {
       //location and tag and type
-      //(have to repeat tag cause of the tag1/tag2 thing)
       return {
         view : "by_loc_tag_type",
         limit : 25,

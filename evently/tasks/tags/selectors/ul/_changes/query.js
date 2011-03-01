@@ -23,7 +23,7 @@ function(e) {
   else {
 	// tag and type
 	return {
-		view : "by_tag",
+		view : "by_tag_type",
 		limit : 25,
 		startkey : [tag, type, {}],
 		endkey : [tag, type],

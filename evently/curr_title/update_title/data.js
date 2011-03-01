@@ -1,10 +1,10 @@
 function(e) {
-    $.log("update title");
+    $.log("in update title");
 
 	function getAnyTagUri(state) 
 	{
 		if ((state.type==undefined) && (state.loc==undefined)) 
-			return "#/";
+			return "#/type/any";
 		
 		if ((state.type!=undefined) && (state.loc==undefined)) 
 			return "#/type/" + encodeURIComponent(state.type);
@@ -20,7 +20,7 @@ function(e) {
 	function getAnyLocUri(state) 
 	{
 		if ((state.type==undefined) && (state.tag==undefined)) 
-			return "#/";
+			return "#/type/any";
 		
 		if ((state.type!=undefined) && (state.tag==undefined)) 
 			return "#/type/" + encodeURIComponent(state.type);
@@ -34,8 +34,7 @@ function(e) {
 	}
 	
     var state  = $$(this).app.state;
-	$.log("state- loc:" + state.loc + " tag:" + state.tag + " type:" + state.type);
-
+	
     if (state==undefined) {
         state = {};
 	}
@@ -50,13 +49,13 @@ function(e) {
     switch(state.type) {
         case "offer":
             what_part = ((where_part +tag_part)=="") ?
-			 "Offers of help - <i class=\"lowlight\">i.e. tagged with #offer and #chch</i>" :
+			 "Offers of help - <i class=\"lowlight\">e.g. tagged with #offer and #eqnz</i>" :
 			 "Offers of help ";
             break;
         
         case "need":
 			what_part = ((where_part +tag_part)=="") ?
-			 "Requests for help - <i class=\"lowlight\">i.e. tagged with #need or #helpme, and #chch</i>" :
+			 "Requests for help - <i class=\"lowlight\">e.g. tagged with #need and #eqnz</i>" :
 			 "Requests for help ";
             break;
         
@@ -68,7 +67,6 @@ function(e) {
 			
     }
 	
-	$.log("state- loc:" + state.loc + " tag:" + state.tag + " type:" + state.type);
-	$.log("state- what:" + what_part + " where:" + where_part + " tag:" + tag_part);
+	$.log("title - what:" + what_part + " where:" + where_part + " tag:" + tag_part);
     return {"what":what_part,"where":where_part,"tag":tag_part};
 }

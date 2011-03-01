@@ -87,27 +87,14 @@ $.couch.app(function(app) {
   
   $("#tasks").evently(tasks, app);
   
-  $.evently.connect("#curr_title","#types", ["update_types"]);
-  $.evently.connect("#curr_title","#tags", ["update_tags"]);
-  $.evently.connect("#curr_title","#locations", ["update_locs"]);
-  
-  //$.evently.connect("#types","#types", ["update_types"]);
-  $.evently.connect("#types","#tags", ["update_tags"]);
-  $.evently.connect("#types","#locations", ["update_locs"]);
-  
-  $.evently.connect("#tags","#types", ["update_types"]);
-  //$.evently.connect("#tags","#tags", ["update_tags"]);
-  $.evently.connect("#tags","#locations", ["update_locs"]);
-  
-  $.evently.connect("#locations","#types", ["update_types"]);
-  $.evently.connect("#locations","#tags", ["update_tags"]);
-  //$.evently.connect("#locations","#locations", ["update_locs"]);
-  
-  app.state = getStateFromPath(getPath());
-  
   $.pathbinder.onChange(function(path) {
-	  app.state = getStateFromPath(getPath());
-	  $("#curr_title").trigger("update_title");
+		app.state = getStateFromPath(getPath());
+		$("#curr_title").trigger("update_title");	 
+		$("#types").trigger("update_types");
+		$("#tags").trigger("update_tags");
+		$("#locations").trigger("update_locs");
+		$("#groups").trigger("refresh");
+		$("#tasks ul").trigger("refresh");
   });
   $.pathbinder.begin("/");
   
