@@ -366,12 +366,35 @@ margin: 0px 0px 5px 25px;
 }
 
 .addyours ol li {
-font-size: 1.2em;
-color: #092435;
-margin-left: 0px;
-padding: 0px;
-list-style:inherit;
+	font-size: 1.2em;
+	color: #092435;
+	margin-left: 0px;
+	padding: 0px;
+	list-style:inherit;
 }
+
+
+.addyours p.respond {
+	margin: 0px 0px 0px 25px;
+}
+
+.addyours p.respond A {
+	text-decoration:none;
+	line-height:30px;
+}
+
+.addyours p.respond A:hover {
+	text-decoration:underline;
+}
+
+.addyours:hover p.respond {
+	background:#f16529; color:#fff; 
+}
+
+.addyours:hover p.respond A {
+ 	color:#fff;
+}
+
 
 
 /* ----- Foot ----- */

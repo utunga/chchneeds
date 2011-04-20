@@ -58,7 +58,13 @@ function(e) {
 			 "Requests for help - <i class=\"lowlight\">e.g. tagged with #need and #eqnz</i>" :
 			 "Requests for help ";
             break;
-        
+			
+        case "report":
+			what_part = ((where_part +tag_part)=="") ?
+			 "Reports (unverified) - <i class=\"lowlight\">e.g. tagged with #report and #eqnz</i>" :
+			 "Reports (unverified) ";
+            break;
+
         default:
             what_part = ((where_part +tag_part)=="") ?
 			 "Tweets tagged with #eqnz or #chch or #christchurch" :

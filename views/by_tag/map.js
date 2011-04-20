@@ -1,5 +1,5 @@
 function(doc) {
-    if (doc.doc_type=="message")
+    if (isValidChCh(doc))
     {
         var tags = []
         var timestamp = doc.timestamp

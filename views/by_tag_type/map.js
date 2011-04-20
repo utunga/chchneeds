@@ -1,5 +1,5 @@
 function(doc) {
-    if (doc.doc_type=="message")
+    if (isValidChCh(doc))
     {
 		// determine type
         //should be done at parse time but anyway doc.message_type
@@ -9,6 +9,9 @@ function(doc) {
 		}
 		else if (doc.raw_text.match(/\#need/)) {
 			type="need";
+		}
+		else if (doc.raw_text.match(/\#report /)) {
+			type="report";
 		}
 		else {			
 			for(var idx in doc.tags) {

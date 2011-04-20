@@ -43,6 +43,13 @@ function(resp) {
 	 a_is_current: (("need"==curr_type) ? "class='current'" : "")
 		},
 		{
+	     name:"#reports",
+		 type:"report",
+		 state_uri: getTypeStateURI(state,"report"),
+		 li_class:  "class='button mrm'",
+	 a_is_current: (("need"==curr_type) ? "class='current'" : "")
+		},
+		{
 		 name:"Live Stream",
 		 type:"any",
 		 state_uri: getTypeStateURI(state,"any"),

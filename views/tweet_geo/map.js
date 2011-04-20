@@ -1,5 +1,5 @@
 function(doc) {
-    if (doc.doc_type=="message")
+    if (isValidChCh(doc))
     {
 		// determine type
         // should be done at first parse time
