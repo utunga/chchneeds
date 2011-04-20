@@ -33,7 +33,7 @@ def output_tokens_by_date_to_csv(query):
     rows = query.top_tokens_by_date_type('tag')
     for row in rows:
         csv_writer.writerow(row)
-    print 'wrote top mentions'
+    print 'wrote top tags'
     
     print 'querying couch for top mentions'
     csv_writer = csv.writer(open('out/top_mentions_by_date.csv', 'wb'))

@@ -51,7 +51,7 @@ class QueryCouch(object):
                 results = []
                 for (overall_count, token) in top_tokens[0:1000]:
                         
-                        view = self.db.view('research/tokens', reduce=True, group_level=4, startkey=[type, token], endkey=[type, token +' '])                        
+                        view = self.db.view('research/tokens', reduce=True, group_level=3, startkey=[type, token], endkey=[type, token +' '])                        
                         for row in view:
                             results.append((row.key[0], row.key[1], row.key[2], row.value, overall_count))
                             
