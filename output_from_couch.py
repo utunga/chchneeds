@@ -48,12 +48,32 @@ def output_tokens_by_date_to_csv(query):
     for row in rows:
         csv_writer.writerow(row)
     print 'wrote top words'
-    
-def main(argv = sys.argv):
-    server_url = 'http://chchneeds.org.nz'
-    database = 'alldb'
-    query = QueryCouch(server_url, database)
-    output_tokens_by_date_to_csv(query)
 
+def output_tweet_counts_to_csv(query):
+    
+    csv_writer = csv.writer(open('out/tweet_counts_by_date.csv', 'wb'))
+    print 'querying couch for tweets by date '
+    rows = query.count_tweets_by_date()
+    for row in rows:
+        csv_writer.writerow(row)
+    print 'wrote tweet counts by date'
+    
+    csv_writer = csv.writer(open('out/tweet_counts_by_hour.csv', 'wb'))
+    print 'querying couch for tweets by hour '
+    rows = query.count_tweets_by_hour()
+    for row in rows:
+        csv_writer.writerow(row)
+    print 'wrote tweet counts by hour'
+
+ 
+def main(argv = sys.argv):
+    server_url = 'http://localhost:5984' #'http://chchneeds.org.nz'
+    database = 'chchtest' #'alldb'
+    query = QueryCouch(server_url, database)
+    
+    #output_tokens_overall_to_csv(query)
+    #output_tokens_by_date_to_csv(query)
+    output_tweet_counts_to_csv(query)
+    
 if __name__ == '__main__':
     sys.exit(main())    

@@ -56,3 +56,23 @@ class QueryCouch(object):
                             results.append((row.key[0], row.key[1], row.key[2], row.value, overall_count))
                             
                 return results
+        
+        def count_tweets_by_date(self):
+            view = self.db.view('research/all', reduce=True, group_level=1)
+            
+            print 'getting tweets by date count '
+            results = []
+            for row in view:
+                results.append((row.key[0], row.value))
+                
+            return results
+
+        def count_tweets_by_hour(self):
+            view = self.db.view('research/all', reduce=True, group_level=2)
+            
+            print 'getting tweets by hour count'
+            results = []
+            for row in view:
+                results.append((row.key[0], row.key[1], row.value))
+                
+            return results
